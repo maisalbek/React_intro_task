@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/Header';
+import Section from './components/section/Section';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/footer/Footer';
+import Data from './components/data/Data';
+
+
 
 function App() {
+  const showmessage = (arr) =>{
+    arr.forEach(element => {
+      console.log(element);
+    });
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Header />
+      <Section />
+      <Footer />
+      <Data showmessage = {showmessage} />
     </div>
+   
   );
 }
 
